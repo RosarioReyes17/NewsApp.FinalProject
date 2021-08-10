@@ -40,8 +40,6 @@ namespace NewsApp.WebAPI.Controllers
                 FechaPublicacion = articuloss.FechaPublicacion,
                 ArticuloURL = articuloss.ArticuloUrl,
 
-
-          
                 
             }).ToArray();
 
