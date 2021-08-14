@@ -31,7 +31,7 @@ namespace NewsApp.Management1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArticlesManagement));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnPacientes = new System.Windows.Forms.Button();
+            this.btnRegistrerArticles = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCiitas = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -52,17 +52,18 @@ namespace NewsApp.Management1
             this.pictureBox1.TabIndex = 65;
             this.pictureBox1.TabStop = false;
             // 
-            // btnPacientes
+            // btnRegistrerArticles
             // 
-            this.btnPacientes.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnPacientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPacientes.Location = new System.Drawing.Point(41, 343);
-            this.btnPacientes.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(291, 56);
-            this.btnPacientes.TabIndex = 64;
-            this.btnPacientes.Text = "ARTICLES\r\nREGISTRATION";
-            this.btnPacientes.UseVisualStyleBackColor = false;
+            this.btnRegistrerArticles.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnRegistrerArticles.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRegistrerArticles.Location = new System.Drawing.Point(41, 343);
+            this.btnRegistrerArticles.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrerArticles.Name = "btnRegistrerArticles";
+            this.btnRegistrerArticles.Size = new System.Drawing.Size(291, 56);
+            this.btnRegistrerArticles.TabIndex = 64;
+            this.btnRegistrerArticles.Text = "ARTICLES REGISTRATION";
+            this.btnRegistrerArticles.UseVisualStyleBackColor = false;
+            this.btnRegistrerArticles.Click += new System.EventHandler(this.btnRegistrerArticles_Click);
             // 
             // label6
             // 
@@ -123,18 +124,19 @@ namespace NewsApp.Management1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(747, 447);
+            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.ClientSize = new System.Drawing.Size(748, 414);
             this.Controls.Add(this.btnDocctores);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCiitas);
-            this.Controls.Add(this.btnPacientes);
+            this.Controls.Add(this.btnRegistrerArticles);
             this.Controls.Add(this.label6);
             this.Name = "ArticlesManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ArticlesManagement";
+            this.Load += new System.EventHandler(this.ArticlesManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -145,7 +147,7 @@ namespace NewsApp.Management1
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnPacientes;
+        private System.Windows.Forms.Button btnRegistrerArticles;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCiitas;
         private System.Windows.Forms.PictureBox pictureBox3;

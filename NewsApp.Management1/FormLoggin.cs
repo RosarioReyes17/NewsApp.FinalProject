@@ -23,7 +23,7 @@ namespace NewsApp.Management1
 
         private void FormLoggin_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         public class NewsAppClient
@@ -54,8 +54,10 @@ namespace NewsApp.Management1
 
                     ArticlesManagement am = new ArticlesManagement();
                     am.ShowDialog();
+                    
 
                     return responseObject;
+                    
                 }
                 else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
@@ -72,16 +74,22 @@ namespace NewsApp.Management1
 
         }
 
-        private void btnEnter_Click(object sender, EventArgs e)
-        {
-            NewsAppClient newsc = new NewsAppClient();
 
-            var auth = newsc.Authenticate(txtUser.Text, txtPassword.Text);
-        }
 
         private void txtUser_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSing_Click(object sender, EventArgs e)
+        {
+            NewsAppClient newsc = new NewsAppClient();
+            
+
+            var auth = newsc.Authenticate(txtUser.Text, txtPassword.Text);
+
+
+            this.Hide();
         }
     }
 }

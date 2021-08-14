@@ -26,5 +26,17 @@ namespace NewsApp.Management1
         {
 
         }
+
+        private void ArticlesManagement_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistrerArticles_Click(object sender, EventArgs e)
+        {
+            CreateArticles createA = new CreateArticles();
+            createA.ShowDialog();
+            this.Close();
+        }
     }
 }
