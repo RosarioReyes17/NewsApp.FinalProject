@@ -13,5 +13,9 @@ namespace NewsApp.WebAPI
         public DateTime? FechaPublicacion { get; set; }
         public string NombreCompleto { get; set; }
         public string Contenido { get; set; }
+        public string Descripcion { get; set; }
+        public string NombreCategoria { get; set; }
+        public string NombrePais { get; set; }
+        public string NombreFuente { get; set; }
     }
 }

@@ -39,6 +39,10 @@ namespace NewsApp.WebAPI.Controllers
                 NombreCompleto = articuloss.IdAutorNavigation.NombreCompleto,
                 FechaPublicacion = articuloss.FechaPublicacion,
                 ArticuloURL = articuloss.ArticuloUrl,
+                Descripcion = articuloss.Descripcion,
+                NombreCategoria = articuloss.IdCategoriaNavigation.NombreCategoria,
+                NombrePais = articuloss.IdPaisNavigation.NombrePais,
+                NombreFuente= articuloss.IdFuenteNavigation.NombreFuente,
 
                 
             }).ToArray();

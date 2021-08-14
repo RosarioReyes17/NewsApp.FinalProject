@@ -16,5 +16,12 @@ namespace NewsApp.Management1
         {
             InitializeComponent();
         }
+
+        private void btnConsult_Click(object sender, EventArgs e)
+        {
+            ConsultArticle consultA = new ConsultArticle();
+            consultA.ShowDialog();
+            this.Close();
+        }
     }
 }

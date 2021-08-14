@@ -250,6 +250,7 @@ namespace NewsApp.Management1
             this.btnConsult.TabIndex = 97;
             this.btnConsult.Text = "CONSULT\r\nARTICLE\r\n";
             this.btnConsult.UseVisualStyleBackColor = false;
+            this.btnConsult.Click += new System.EventHandler(this.btnConsult_Click);
             // 
             // label6
             // 
