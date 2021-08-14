@@ -89,7 +89,6 @@ namespace NewsApp.Management1
             var auth = newsc.Authenticate(txtUser.Text, txtPassword.Text);
 
 
-            this.Hide();
         }
     }
 }
