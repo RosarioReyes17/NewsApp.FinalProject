@@ -49,13 +49,15 @@ namespace NewsApp.Management1
             this.btnClean = new System.Windows.Forms.Button();
             this.btnConsult = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbSource = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // cmbCountry
             // 
             this.cmbCountry.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbCountry.FormattingEnabled = true;
-            this.cmbCountry.Location = new System.Drawing.Point(718, 192);
+            this.cmbCountry.Location = new System.Drawing.Point(718, 238);
             this.cmbCountry.Name = "cmbCountry";
             this.cmbCountry.Size = new System.Drawing.Size(214, 29);
             this.cmbCountry.TabIndex = 96;
@@ -82,7 +84,7 @@ namespace NewsApp.Management1
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(576, 197);
+            this.label9.Location = new System.Drawing.Point(589, 239);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 24);
@@ -93,7 +95,7 @@ namespace NewsApp.Management1
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(564, 150);
+            this.label8.Location = new System.Drawing.Point(576, 146);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 24);
@@ -222,7 +224,7 @@ namespace NewsApp.Management1
             // 
             this.btnRegistrer.BackColor = System.Drawing.Color.LightGreen;
             this.btnRegistrer.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrer.Location = new System.Drawing.Point(740, 256);
+            this.btnRegistrer.Location = new System.Drawing.Point(814, 306);
             this.btnRegistrer.Name = "btnRegistrer";
             this.btnRegistrer.Size = new System.Drawing.Size(141, 68);
             this.btnRegistrer.TabIndex = 97;
@@ -239,12 +241,13 @@ namespace NewsApp.Management1
             this.btnClean.TabIndex = 97;
             this.btnClean.Text = "CLEAN \r\nFIELDS\r\n";
             this.btnClean.UseVisualStyleBackColor = false;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // btnConsult
             // 
             this.btnConsult.BackColor = System.Drawing.Color.LightGreen;
             this.btnConsult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnConsult.Location = new System.Drawing.Point(576, 370);
+            this.btnConsult.Location = new System.Drawing.Point(589, 370);
             this.btnConsult.Name = "btnConsult";
             this.btnConsult.Size = new System.Drawing.Size(138, 68);
             this.btnConsult.TabIndex = 97;
@@ -266,6 +269,26 @@ namespace NewsApp.Management1
             this.label6.TabIndex = 98;
             this.label6.Text = "ARTICLES MANAGEMENT";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(589, 194);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 24);
+            this.label4.TabIndex = 89;
+            this.label4.Text = "SOURCE";
+            // 
+            // cmbSource
+            // 
+            this.cmbSource.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbSource.FormattingEnabled = true;
+            this.cmbSource.Location = new System.Drawing.Point(718, 193);
+            this.cmbSource.Name = "cmbSource";
+            this.cmbSource.Size = new System.Drawing.Size(214, 29);
+            this.cmbSource.TabIndex = 96;
+            // 
             // CreateArticles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -276,9 +299,11 @@ namespace NewsApp.Management1
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnConsult);
             this.Controls.Add(this.btnRegistrer);
+            this.Controls.Add(this.cmbSource);
             this.Controls.Add(this.cmbCountry);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.cmbAuthor);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -294,6 +319,7 @@ namespace NewsApp.Management1
             this.Controls.Add(this.label3);
             this.Name = "CreateArticles";
             this.Text = "CreateArticles";
+            this.Load += new System.EventHandler(this.CreateArticles_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +347,7 @@ namespace NewsApp.Management1
         private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Button btnConsult;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbSource;
     }
 }

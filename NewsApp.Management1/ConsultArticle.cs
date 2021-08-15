@@ -47,6 +47,7 @@ namespace NewsApp.Management1
             var list = (from a in articles
                         where a.Titulo.ToLower().Contains(txtSearch.Text.ToLower())
                         || a.NombreCompleto.ToLower().Contains(txtSearch.Text.ToLower())
+                        || a.Contenido.ToLower().Contains(txtSearch.Text.ToLower())
                         select new
                         {
                             IdArticulo = a.IdArticulo,
