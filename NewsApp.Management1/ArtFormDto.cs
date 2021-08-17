@@ -19,9 +19,19 @@ namespace NewsApp.Management1
         
         public DateTime? FechaPublicacion { get; set; }
         public string Contenido { get; set; }
+
+        public int IdCategoria { get; set; }
         public string NombreCategoria { get; set; }
+
+        public int IdPais { get; set; }
         public string NombrePais { get; set; }
+
+        public int IdFuente { get; set; }
         public string NombreFuente { get; set; }
+
+        public int IdAutor { get; set; }
         public string NombreCompleto { get; set; }
+
+
     }
 }

@@ -51,13 +51,15 @@ namespace NewsApp.Management1
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbSource = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // cmbCountry
             // 
             this.cmbCountry.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbCountry.FormattingEnabled = true;
-            this.cmbCountry.Location = new System.Drawing.Point(718, 238);
+            this.cmbCountry.Location = new System.Drawing.Point(718, 230);
             this.cmbCountry.Name = "cmbCountry";
             this.cmbCountry.Size = new System.Drawing.Size(214, 29);
             this.cmbCountry.TabIndex = 96;
@@ -66,7 +68,7 @@ namespace NewsApp.Management1
             // 
             this.cmbCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(718, 145);
+            this.cmbCategory.Location = new System.Drawing.Point(718, 137);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(214, 29);
             this.cmbCategory.TabIndex = 95;
@@ -75,7 +77,7 @@ namespace NewsApp.Management1
             // 
             this.cmbAuthor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbAuthor.FormattingEnabled = true;
-            this.cmbAuthor.Location = new System.Drawing.Point(718, 99);
+            this.cmbAuthor.Location = new System.Drawing.Point(718, 91);
             this.cmbAuthor.Name = "cmbAuthor";
             this.cmbAuthor.Size = new System.Drawing.Size(214, 29);
             this.cmbAuthor.TabIndex = 94;
@@ -84,7 +86,7 @@ namespace NewsApp.Management1
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(589, 239);
+            this.label9.Location = new System.Drawing.Point(589, 231);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 24);
@@ -95,7 +97,7 @@ namespace NewsApp.Management1
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(576, 146);
+            this.label8.Location = new System.Drawing.Point(576, 138);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 24);
@@ -106,7 +108,7 @@ namespace NewsApp.Management1
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(589, 100);
+            this.label7.Location = new System.Drawing.Point(589, 92);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 24);
@@ -144,7 +146,7 @@ namespace NewsApp.Management1
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(276, 70);
-            this.txtDescription.TabIndex = 78;
+            this.txtDescription.TabIndex = 2;
             // 
             // label3
             // 
@@ -165,7 +167,7 @@ namespace NewsApp.Management1
             this.txtContent.Multiline = true;
             this.txtContent.Name = "txtContent";
             this.txtContent.Size = new System.Drawing.Size(276, 70);
-            this.txtContent.TabIndex = 78;
+            this.txtContent.TabIndex = 3;
             // 
             // label10
             // 
@@ -198,7 +200,7 @@ namespace NewsApp.Management1
             this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(276, 50);
-            this.txtTitle.TabIndex = 78;
+            this.txtTitle.TabIndex = 1;
             // 
             // txtArticleURL
             // 
@@ -208,7 +210,7 @@ namespace NewsApp.Management1
             this.txtArticleURL.Multiline = true;
             this.txtArticleURL.Name = "txtArticleURL";
             this.txtArticleURL.Size = new System.Drawing.Size(276, 50);
-            this.txtArticleURL.TabIndex = 78;
+            this.txtArticleURL.TabIndex = 4;
             // 
             // txtImageURL
             // 
@@ -218,18 +220,19 @@ namespace NewsApp.Management1
             this.txtImageURL.Multiline = true;
             this.txtImageURL.Name = "txtImageURL";
             this.txtImageURL.Size = new System.Drawing.Size(276, 50);
-            this.txtImageURL.TabIndex = 78;
+            this.txtImageURL.TabIndex = 5;
             // 
             // btnRegistrer
             // 
             this.btnRegistrer.BackColor = System.Drawing.Color.LightGreen;
             this.btnRegistrer.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrer.Location = new System.Drawing.Point(814, 306);
+            this.btnRegistrer.Location = new System.Drawing.Point(560, 427);
             this.btnRegistrer.Name = "btnRegistrer";
             this.btnRegistrer.Size = new System.Drawing.Size(141, 68);
             this.btnRegistrer.TabIndex = 97;
             this.btnRegistrer.Text = "REGISTRER\r\nARTICLE\r\n";
             this.btnRegistrer.UseVisualStyleBackColor = false;
+            this.btnRegistrer.Click += new System.EventHandler(this.btnRegistrer_Click);
             // 
             // btnClean
             // 
@@ -247,7 +250,7 @@ namespace NewsApp.Management1
             // 
             this.btnConsult.BackColor = System.Drawing.Color.LightGreen;
             this.btnConsult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnConsult.Location = new System.Drawing.Point(589, 370);
+            this.btnConsult.Location = new System.Drawing.Point(560, 335);
             this.btnConsult.Name = "btnConsult";
             this.btnConsult.Size = new System.Drawing.Size(138, 68);
             this.btnConsult.TabIndex = 97;
@@ -273,7 +276,7 @@ namespace NewsApp.Management1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(589, 194);
+            this.label4.Location = new System.Drawing.Point(589, 186);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 24);
@@ -284,10 +287,30 @@ namespace NewsApp.Management1
             // 
             this.cmbSource.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbSource.FormattingEnabled = true;
-            this.cmbSource.Location = new System.Drawing.Point(718, 193);
+            this.cmbSource.Location = new System.Drawing.Point(718, 185);
             this.cmbSource.Name = "cmbSource";
             this.cmbSource.Size = new System.Drawing.Size(214, 29);
             this.cmbSource.TabIndex = 96;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(589, 274);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 24);
+            this.label5.TabIndex = 89;
+            this.label5.Text = "DATE";
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(718, 274);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(134, 29);
+            this.dtpFecha.TabIndex = 99;
             // 
             // CreateArticles
             // 
@@ -295,6 +318,7 @@ namespace NewsApp.Management1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(957, 497);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnConsult);
@@ -304,6 +328,7 @@ namespace NewsApp.Management1
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.cmbAuthor);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -349,5 +374,7 @@ namespace NewsApp.Management1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbSource;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

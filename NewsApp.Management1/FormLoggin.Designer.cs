@@ -134,6 +134,7 @@ namespace NewsApp.Management1
             this.Name = "FormLoggin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LOGIN";
+            this.Load += new System.EventHandler(this.FormLoggin_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

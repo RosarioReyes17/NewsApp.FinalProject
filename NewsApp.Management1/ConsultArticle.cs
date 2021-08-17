@@ -94,5 +94,10 @@ namespace NewsApp.Management1
         {
             labelRegistros.Text = "REGISTROS: " + dtgArticlesConsult.RowCount;
         }
+
+        private void dtgArticlesConsult_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

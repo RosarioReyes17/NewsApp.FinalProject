@@ -145,12 +145,27 @@ namespace NewsApp.WebAPI.Controllers
         // POST: api/Articuloes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Articulo>> PostArticulo(Articulo articulo)
+        [AllowAnonymous]
+        public async Task<ActionResult<Articulo>> PostArticulo(Articulo art)
         {
-            _context.Articulos.Add(articulo);
+            var _article = new Articulo
+            {
+                Titulo = art.Titulo,
+                Descripcion = art.Descripcion,
+                Contenido = art.Contenido,
+                ArticuloUrl = art.ArticuloUrl,
+                ImagenUrl = art.ImagenUrl,
+                IdAutor = art.IdAutor,
+                IdCategoria = art.IdCategoria,
+                IdFuente = art.IdFuente,
+                IdPais = art.IdPais,
+                FechaPublicacion = DateTime.Now,
+            };
+
+            _context.Articulos.Add(_article);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetArticulo", new { id = articulo.IdArticulo }, articulo);
+            return CreatedAtAction(nameof(GetArticle), new { id = _article.Titulo }, _article);
         }
 
         // DELETE: api/Articuloes/5

@@ -18,11 +18,14 @@ namespace NewsApp.Management1
 {
     public partial class CreateArticles : Form
     {
-        static HttpClient httpClient = new HttpClient();
+        static HttpClient HttpClient = new HttpClient();
 
+        ArtFormDto objArt = null;
         public CreateArticles()
         {
             InitializeComponent();
+
+            HttpClient.BaseAddress = new Uri("https://localhost:44395/");
         }
 
         private void btnConsult_Click(object sender, EventArgs e)
@@ -154,11 +157,87 @@ namespace NewsApp.Management1
             cmbCategory.SelectedIndex = 0;
             cmbCountry.SelectedIndex = 0;
             cmbSource.SelectedIndex = 0;
+
         }
 
         private void btnClean_Click(object sender, EventArgs e)
         {
             clearFields();
+        }
+
+        private void InsertArticle()
+        {
+            if (objArt == null)
+            {
+                var articulos = new ArtFormDto
+                {
+                    Titulo = txtTitle.Text,
+                    Descripcion = txtDescription.Text,
+                    Contenido = txtContent.Text,
+                    ArticuloUrl = txtArticleURL.Text,
+                    ImagenUrl = txtImageURL.Text,
+                    IdAutor = cmbAuthor.SelectedIndex,
+                    IdCategoria = cmbCategory.SelectedIndex,
+                    IdFuente = cmbSource.SelectedIndex,
+                    IdPais = cmbCountry.SelectedIndex,
+                    FechaPublicacion = DateTime.Now,
+
+
+                };
+
+                string json = JsonConvert.SerializeObject(articulos);
+
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = HttpClient.PostAsync("/api/Articuloes", content).Result;
+
+                if (response.StatusCode == HttpStatusCode.Created || response.StatusCode == HttpStatusCode.OK)
+                {
+                    MessageBox.Show("Article Inserted");
+
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Article error");
+                }
+            }
+            else
+            {
+                objArt.Titulo = txtTitle.Text;
+                objArt.Descripcion = txtDescription.Text;
+                objArt.Contenido = txtContent.Text;
+                objArt.ArticuloUrl = txtArticleURL.Text;
+                objArt.ImagenUrl = txtImageURL.Text;
+                objArt.IdAutor = cmbAuthor.SelectedIndex;
+                objArt.IdCategoria = cmbCategory.SelectedIndex;
+                objArt.IdFuente = cmbSource.SelectedIndex;
+                objArt.IdPais = cmbCountry.SelectedIndex;
+                objArt.FechaPublicacion = DateTime.Now;
+
+
+                string json = JsonConvert.SerializeObject(objArt);
+
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = HttpClient.PostAsync("/api/Articuloes/" + objArt.IdArticulo.ToString(), content).Result;
+
+                if (response.StatusCode == HttpStatusCode.Created || response.StatusCode == HttpStatusCode.OK)
+                {
+                    MessageBox.Show("Article Inserted");
+
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Article error");
+                }
+            }
+        }
+
+        private void btnRegistrer_Click(object sender, EventArgs e)
+        {
+            InsertArticle();
         }
     }
 }

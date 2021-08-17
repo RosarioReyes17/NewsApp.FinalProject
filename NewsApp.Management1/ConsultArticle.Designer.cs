@@ -60,7 +60,7 @@ namespace NewsApp.Management1
             this.dtgArticlesConsult.Size = new System.Drawing.Size(776, 269);
             this.dtgArticlesConsult.TabIndex = 100;
             this.dtgArticlesConsult.DataSourceChanged += new System.EventHandler(this.dtgArticlesConsult_DataSourceChanged);
-           
+            this.dtgArticlesConsult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgArticlesConsult_CellContentClick);
             // 
             // txtSearch
             // 
