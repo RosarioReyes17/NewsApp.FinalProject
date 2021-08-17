@@ -165,6 +165,8 @@ namespace NewsApp.Management1
             clearFields();
         }
 
+
+
         private void InsertArticle()
         {
             if (objArt == null)
@@ -199,7 +201,7 @@ namespace NewsApp.Management1
                 }
                 else
                 {
-                    MessageBox.Show("Article error");
+                    MessageBox.Show("Article Inserted");
                 }
             }
             else
@@ -230,7 +232,7 @@ namespace NewsApp.Management1
                 }
                 else
                 {
-                    MessageBox.Show("Article error");
+                    MessageBox.Show("Article Inserted");
                 }
             }
         }
